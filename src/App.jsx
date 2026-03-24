@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { supabase } from './lib/supabase.js'
-
+import { supabase } from "./supabase"
 /* ─────────────────── CONSTANTS ─────────────────── */
 const LOCATIONS = [
   { id: 'football', label: 'Football Ground', emoji: '⚽' },
