@@ -1,8 +1,3 @@
--- ============================================================
---  NOOBS UNITED — Supabase Schema
---  Run this entire file in Supabase → SQL Editor → New Query
--- ============================================================
-
 -- 1. USERS TABLE (custom auth — no Supabase Auth needed)
 create table if not exists public.users (
   id         uuid default gen_random_uuid() primary key,
@@ -50,7 +45,3 @@ create policy "Public update votes" on public.daily_votes for update using (true
 alter publication supabase_realtime add table public.daily_votes;
 alter publication supabase_realtime add table public.users;
 
--- ============================================================
---  Done! Now add your VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY
---  to your .env file (and Vercel environment variables).
--- ============================================================
